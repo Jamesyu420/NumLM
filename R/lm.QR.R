@@ -1,10 +1,9 @@
 lm.QR <- function(X, y){
-  X <- as.matrix(iris[,1:4])
-  # Design matrix with intercept
-  X <- cbind(rep(1,150),X)
-  colnames(X)[1] <- "(intercept)"
   n <- dim(X)[1]
   p <- dim(X)[2]
+  # Design matrix with intercept
+  X <- cbind(rep(1,n),X)
+  colnames(X)[1] <- "(intercept)"
   # QR decomposition
   QR <- qr(X)
   Q <- qr.Q(QR)
