@@ -12,7 +12,7 @@ lm.QR <- function(X, y){
   # Estimate beta using Gram-Schmidt
   beta.hat <- as.numeric(backsolve(r = R, x = crossprod(Q, y)))
   names(beta.hat) <- colnames(X)
-  # Hypothesis testing
+  # Hypothesis test
   # Fitted values
   fitted <- as.numeric(X %*% beta.hat)
   names(fitted) <- as.character(1:length(y))
