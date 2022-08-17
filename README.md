@@ -12,7 +12,7 @@ The most popular optimization algorithm in machine learning.
 
 ## Online learning
 
-In this part, we suppose a simple model has been generated and we update the model for each one new observation.
+In this part, we suppose a simple model has been generated and we update the model for each one new observation using recursive least squares, which could also be seen as a 'stochastic' gradient descent.
 
 ## Linear mixed model
 

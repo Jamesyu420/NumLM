@@ -5,6 +5,6 @@ Version: 0.1.0
 Author: Baichen Yu
 Maintainer: Baichen Yu <baichen.yu@stu.ecnu.edu.cn>
 Description: It contains QR factorization, gradient descent, and online update, temporarily.
-License: What license is it under?
+License: GPL License
 Encoding: UTF-8
 LazyData: true
