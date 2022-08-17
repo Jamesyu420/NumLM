@@ -49,5 +49,18 @@ cat("Test error of LM-GD:", test_error.GD, "\n")
 model.GD <- lm.test(Z.train, y.train, model.GD.coef)
 model.GD$t.test
 
+# Stochastic gradient descent
+system.time(
+  for(i in 1:100){
+    model.SGD.coef <- lm.SGD(Z.train, y.train)
+  }
+)
+y.test.SGD.pred <- Z.test %*% model.SGD.coef[2:11] + model.SGD.coef[1]
+test_error.SGD <- sum((y.test.SGD.pred - y.test)^2)/m
+cat("Test error of LM-SGD:", test_error.SGD, "\n")
+
+model.SGD <- lm.test(Z.train, y.train, model.SGD.coef)
+model.SGD$t.test
+
 # Online update
 
