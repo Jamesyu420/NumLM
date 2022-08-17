@@ -1,6 +1,6 @@
 # SolveLM
 
-This is a ongoing training package for numerical resolution of solving linear model by Baichen Yu. Some main ideas are below.
+This is a training package for numerical resolution of solving linear model by Baichen Yu. Some main ideas are below.
 
 ## QR factorization
 

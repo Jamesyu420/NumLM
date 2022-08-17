@@ -59,8 +59,17 @@ y.test.SGD.pred <- Z.test %*% model.SGD.coef[2:11] + model.SGD.coef[1]
 test_error.SGD <- sum((y.test.SGD.pred - y.test)^2)/m
 cat("Test error of LM-SGD:", test_error.SGD, "\n")
 
-model.SGD <- lm.test(Z.train, y.train, model.SGD.coef)
-model.SGD$t.test
+# Recursive least squares
+system.time(
+  for(i in 1:100){
+    model.RecursiveLS.coef <- lm.RecursiveLS(Z.train, y.train)
+  }
+)
 
-# Online update
+y.test.RecursiveLS.pred <- Z.test %*% model.RecursiveLS.coef[2:11] +
+  model.RecursiveLS.coef[1]
+test_error.RecursiveLS <- sum((y.test.RecursiveLS.pred - y.test)^2)/m
+cat("Test error of LM-RecursiveLS:", test_error.RecursiveLS, "\n")
+
+
 
