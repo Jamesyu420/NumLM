@@ -1,5 +1,6 @@
 load("demo/LMMdata.RData")
 data <- as.matrix(data)
+library(SolveLM)
 library(caret)
 
 set.seed(42)
