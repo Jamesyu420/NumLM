@@ -12,6 +12,6 @@ lm.RecursiveLS <- function(X, y){
     b <- Ax / xAx
     beta <- beta + (y[i] - as.numeric(t(beta) %*% X[i,])) * b
   }
-  names(beta.hat) <- colnames(X)
+  names(beta) <- colnames(X)
   beta
 }
